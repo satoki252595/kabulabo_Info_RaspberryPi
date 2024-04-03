@@ -3,8 +3,8 @@ import yfinance
 
 class stockInfo(object):
 
-    def __init__(self,code):
-        self.code = str(code)
+    def __init__(self,code:str):
+        self.code = code
         
     def getStockPriceInfo(self,period:str,interval:str) -> pd.core.frame.DataFrame:
         
