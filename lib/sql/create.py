@@ -27,3 +27,7 @@ def createStockCodes():
     
     cur.close()
     con.close()
+    
+if __name__ == '__main__':
+    createStockPrice()
+    createStockCodes()
