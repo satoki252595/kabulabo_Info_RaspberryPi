@@ -29,3 +29,15 @@ def insertStockCode(df:pd.core.frame.DataFrame):
     con.commit()
     con.close()
     
+def insertStockCreditBalances(df:pd.core.frame.DataFrame):
+
+    #connection確立
+    con = sqlite3.connect("./DB/stockCreditBalances.db")
+
+    #一括書込み
+    df.to_sql('stockCreditBalances',con,if_exists='append',index=None)
+
+    #commit
+    con.commit()
+    con.close()
+    
