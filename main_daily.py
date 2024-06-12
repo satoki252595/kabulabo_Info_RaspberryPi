@@ -9,8 +9,5 @@ insert.insertStockCode(df=df)
 ##create TBL & stockPrice insert
 for code in codeList:
     stock = getStockInfo.stockInfo(code=code)
-    stockPrice = stock.getStockPriceInfo(period='20d',interval='1d')
+    stockPrice = stock.getStockPriceInfo(period='5d',interval='1d')
     insert.insertStockPrice(df=stockPrice)
-
-
-    
